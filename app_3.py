@@ -14,7 +14,8 @@ from datetime import datetime
 import pytz
 
 # Configurar la base de datos
-SQLALCHEMY_DATABASE_URL = "mysql+pymysql://root:yfVsMyfoDbTqzoXXUutIjZBRsuaKRaRW@autorack.proxy.rlwy.net:11691/railway"
+
+SQLALCHEMY_DATABASE_URL = "mysql+pymysql://root:rMqzPTJcDBQIcUmcghgpmhdzoqHkwkzt@switchyard.proxy.rlwy.net:59725/railway"
 engine = create_engine(SQLALCHEMY_DATABASE_URL)
 metadata = MetaData()
  
@@ -153,3 +154,4 @@ async def predict_houseprice(file: UploadFile = File(...), db: Session = Depends
     return {
         "predictions": predictions.tolist()
     }
+
